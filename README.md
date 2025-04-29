@@ -1,3 +1,6 @@
+This fork patches lib/mini_portile2/mini_portile.rb to comment out the net::http class
+
+
 # MiniPortile
 
 This documents versions 2 and up, for which the require file was
