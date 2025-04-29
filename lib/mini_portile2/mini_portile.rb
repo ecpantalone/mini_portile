@@ -12,21 +12,21 @@ require 'open3'
 
 # Monkey patch for Net::HTTP by ruby open-uri fix:
 # https://github.com/ruby/ruby/commit/58835a9
-class Net::HTTP
-  private
-  remove_method(:edit_path)
-  def edit_path(path)
-    if proxy?
-      if path.start_with?("ftp://") || use_ssl?
-        path
-      else
-        "http://#{addr_port}#{path}"
-      end
-    else
-      path
-    end
-  end
-end
+#class Net::HTTP
+#  private
+#  remove_method(:edit_path)
+#  def edit_path(path)
+#    if proxy?
+#      if path.start_with?("ftp://") || use_ssl?
+#        path
+#      else
+#        "http://#{addr_port}#{path}"
+#      end
+#    else
+#      path
+#    end
+#  end
+#end
 
 $MINI_PORTILE_STATIC_LIBS = {}
 
